@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DivaUswatunHasanah-250401010449-IF209-PemrogramanWebI</title>
+
+  <!-- NAMA-NIM-KELAS-MATA KULIAH -->
+
+  <!-- Google Font - cukup 1 baris ini sudah bikin tampilan jadi bagus -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===============================
+       CSS DASAR — baca satu per satu!
+       ===============================
+    */
+
+    /* Ini mengatur tampilan seluruh halaman */
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #f0f4f8;
+      color: #2d3748;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Kotak putih di tengah halaman */
+    .kartu {
+      background-color: #ffffff;
+      max-width: 700px;
+      margin: 0 auto;       /* ini yang bikin kotak di tengah */
+      padding: 40px;
+      border-top: 6px solid #2b6cb0;   /* garis biru di atas */
+    }
+
+    /* ── HEADER / BAGIAN ATAS ── */
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Foto profil bulat */
+    .foto-profil {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;           /* ini yang bikin bulat */
+      border: 4px solid #2b6cb0;
+      object-fit: cover;
+    }
+
+    /* Placeholder kalau belum ada foto */
+    .foto-placeholder {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: #ebf4ff;
+      border: 4px solid #2b6cb0;
+      display: inline-block;
+      line-height: 110px;
+      font-size: 40px;
+      color: #2b6cb0;
+    }
+
+    /* Nama besar di atas */
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a365d;
+      margin: 15px 0 5px;
+    }
+
+    /* Teks kecil di bawah nama */
+    .subtitle {
+      color: #718096;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Garis pemisah */
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 25px 0;
+    }
+
+    /* ── JUDUL SECTION ── */
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2b6cb0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #ebf4ff;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2d3748;
+      margin: 0 0 4px;
+    }
+
+    /* ── TEKS BIASA ── */
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #4a5568;
+      margin-bottom: 10px;
+    }
+
+    /* ── LINK / SOSIAL ── */
+    .link-sosial {
+      display: inline-block;
+      margin: 4px 6px 4px 0;
+      padding: 6px 16px;
+      background-color: #ebf4ff;
+      color: #2b6cb0;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+
+    .link-sosial:hover {
+      background-color: #2b6cb0;
+      color: #ffffff;
+    }
+
+    /* ── TABEL ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    th {
+      background-color: #2b6cb0;
+      color: #ffffff;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #4a5568;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f7fafc;
+    }
+
+    /* ── LIST ── */
+    ul {
+      padding-left: 20px;
+      font-size: 14px;
+      color: #4a5568;
+      line-height: 1.9;
+    }
+
+    ol {
+      padding-left: 20px;
+      font-size: 14px;
+      color: #4a5568;
+      line-height: 1.9;
+    }
+
+    /* ── BADGE SKILL ── */
+    .badge {
+      display: inline-block;
+      background-color: #ebf4ff;
+      color: #2b6cb0;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin: 3px 3px 3px 0;
+    }
+
+    /* ── FOTO TAMBAHAN ── */
+    .galeri {
+      display: inline-block;
+      width: 30%;
+      margin-right: 2%;
+    }
+
+    .galeri img,
+    .galeri .kotak-foto {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      background-color: #ebf4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 12px;
+      color: #a0aec0;
+    }
+
+    .footer a {
+      color: #2b6cb0;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== KARTU UTAMA ===== -->
+<div class="kartu">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+
+    <!-- Foto Tengah Atas (syarat soal a: menggunakan foto sendiri) -->
+    <img src="foto/pasfoto.jpeg" class="foto-profil" alt="foto saya">
+
+
+    <h1>DIVA USWATUN HASANAH</h1>
+    <p class="subtitle">Mahasiswa Informatika &nbsp;·&nbsp; IF209</p>
+
+    <!-- 3 link sosial (syarat soal e: min. 3 link) -->
+    <div style="margin-top: 14px;">
+      <a href="https://www.instagram.com/dipavr" target="_blank" class="link-sosial">Instagram</a>
+      <a href="https://www.linkedin.com/in/diva-uswatun-hasanah-5a45b2402" target="_blank" class="link-sosial">LinkedIn</a>
+      <a href="https://github.com/username_kamu" target="_blank" class="link-sosial">GitHub</a>
+    </div>
+
+  </div>
+
+  <hr />
+
+  <!-- ===== TENTANG SAYA (syarat soal b) ===== -->
+  <section>
+    <h2>Tentang Saya</h2>
+
+    <!-- Paragraf 1 -->
+    <p>
+      Halo! Nama saya <strong>Diva Uswatun Hasanah</strong>, mahasiswa jurusan
+      <em>Informatika PJJ S1</em> di Asia Cyber University kelas IF209.
+      Saya tertarik di dunia <mark>teknologi dan pemrograman web</mark>,
+      dan selalu semangat untuk terus belajar hal baru setiap harinya.
+    </p>
+
+    <!-- Paragraf 2 -->
+    <p>
+      Di luar kuliah, saya juga bekerja sebagai Staff Administrasi RS swasta 
+      yang memiliki jobdesc mendaftarkan pasien rawat jalan & rawat inap, 
+      membuat surat kontrol, mengurus berkas pengklaiman BPJS, membuat laporan harian + bulanan.
+      Ketika mempunyai waktu luang saya senang bereksperimen dengan membuat
+      halaman web sederhana dan mempelajari HTML &amp; CSS dari dasar.
+      Saya percaya bahwa dengan konsisten belajar, siapa pun bisa
+      menjadi developer yang <u>handal</u> dan <strong>percaya diri</strong>.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- ===== PENDIDIKAN (Tabel 1) syarat soal g ===== -->
+  <section>
+    <h2>Riwayat Pendidikan</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tahun</th>
+          <th>Sekolah / Kampus</th>
+          <th>Jenjang</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2026 – Sekarang</td>
+          <td>Asia Cyber University (UNSIA)</td>
+          <td>S1 Informatika PJJ</td>
+        </tr>
+        <tr>
+          <td>2020 – 2023</td>
+          <td>SMKN 3 Kuningan</td>
+          <td>SMK</td>
+        </tr>
+        <tr>
+          <td>2017 – 2020</td>
+          <td>SMPN 1 Kadugede</td>
+          <td>SMP</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr />
+
+  <!-- ===== MATA KULIAH (Tabel 2) ===== -->
+  <section>
+    <h2>Mata Kuliah Aktif</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mata Kuliah</th>
+          <th>Dosen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pemrograman Web I</td>
+          <td>Dr. Fauziah, S.Kom, MMSI</td> 
+        </tr>
+        <tr>
+          <td>Estetika Humanisme</td>
+          <td>Indrati Asyariri, S.Hum.,M.Hum</td>
+        </tr>
+        <tr>
+          <td>Pendidikan Pancasila</td>
+          <td>Dr. Abd. Razak Mozin, S,Ag, M.Si</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr />
+
+  <!-- ===== KEAHLIAN (List 1 — unordered list) ===== -->
+  <section>
+    <h2>Keahlian</h2>
+
+    <!-- Badge visual -->
+    <div>
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS3</span>
+      <span class="badge">AutoCad</span>
+      <span class="badge">Microsoft Word</span>
+      <span class="badge">Microsoft Excel</span>
+    </div>
+
+    <!-- ul list (syarat soal: min. 2 list) -->
+    <ul style="margin-top: 12px;">
+      <li>Membuat halaman web dengan HTML dan CSS</li>
+      <li>Menggunakan tools seperti VS Code dan GitHub</li>
+      <li>Memahami konsep dasar pemrograman web</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <!-- ===== HOBI (List 2 — ordered list) ===== -->
+  <section>
+    <h2>Hobi &amp; Minat</h2>
+
+    <!-- ol list (ordered) -->
+    <ol>
+      <li>Belajar web development</li>
+      <li>Menonton tutorial programming di YouTube</li>
+      <li>Bernyanyi</li>
+      <li>Berorganisasi dan bersosialisasi</li>
+    </ol>
+  </section>
+
+  <hr />
+
+  <!-- ===== GALERI FOTO ===== -->
+  <!--
+    Gambar 1, 2, 3 — ganti kotak-foto dengan:
+    <img src="nama_file.jpg" alt="keterangan" class="galeri" />
+  -->
+  <section>
+    <h2>Galeri</h2>
+
+    <div class="galeri">
+      <!-- Gambar 1: kegiatan ngobras -->
+      <img src="foto/foto 1.jpeg" class="kotak-foto" style="background:#ebf4ff; text-align:center; padding:20px; font-size:28px;"></img>
+    </div>
+
+    <div class="galeri">
+      <!-- Gambar 2: tempat kerja -->
+      <img src="foto/foto 3.jpeg" class="kotak-foto" style="background:#ebf4ff; text-align:center; padding:20px; font-size:28px;"></img>
+    </div>
+
+    <div class="galeri">
+      <!-- Gambar 3: belajar -->
+      <img src="foto/foto 2.jpeg" class="kotak-foto" style="background:#ebf4ff; text-align:center; padding:20px; font-size:28px;"></img>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <p>
+      &copy; 2026 Diva Uswatun Hasanah &nbsp;|&nbsp; NIM: 250401010449 &nbsp;|&nbsp; Kelas IF209
+      <br />
+      <a href="https://www.instagram.com/dipavr" target="_blank">Instagram</a>
+      &nbsp;&nbsp;
+      <a href="https://www.linkedin.com/in/diva-uswatun-hasanah-5a45b2402" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+
+</div><!-- end .kartu -->
+
+</body>
+</html>
